@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import { Suspense } from "react";
 import './base.css'
 
 export const Base = () => {
@@ -12,7 +13,9 @@ export const Base = () => {
                 <NavLink to="/movies" className="nav-item">Movies</NavLink>
             </nav>
         </div>
-        <Outlet />
+        <Suspense fallback={<div>Loading page...</div>}>
+            <Outlet />
+        </Suspense>
         </>
     )
 }

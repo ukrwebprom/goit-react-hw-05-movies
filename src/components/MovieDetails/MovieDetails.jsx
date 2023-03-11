@@ -8,7 +8,7 @@ import './movie-details.css';
 import {ReactComponent as BackIcon} from "../../Images/back.svg";
 import { ReactComponent as Nophoto} from '../../Images/nophoto.svg';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
     const [movie, setMovie] = useState({
         title:'',
         vote_average:0,
@@ -60,3 +60,5 @@ export const MovieDetails = () => {
         
     )
 }
+
+export default MovieDetails

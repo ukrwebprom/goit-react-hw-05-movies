@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-export const Trending = () => {
+const Trending = () => {
     const [movies, setMovies] = useState([]);
     const location = useLocation();
 
@@ -31,3 +31,5 @@ export const Trending = () => {
         </div>
     )
 }
+
+export default Trending;

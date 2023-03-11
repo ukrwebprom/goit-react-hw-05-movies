@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 import './search.css';
 import {ReactComponent as SearchIcon} from "../../Images/search.svg";
 
-export const Search = () => {
+const Search = () => {
     const [movies, setMovies] = useState([])
     const [searchParams, setSearchParams] = useSearchParams();
     const query = searchParams.get("query");
@@ -46,3 +46,5 @@ export const Search = () => {
         
     )
 }
+
+export default Search

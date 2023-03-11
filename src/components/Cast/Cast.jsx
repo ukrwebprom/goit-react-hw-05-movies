@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { ReactComponent as Nophoto} from '../../Images/nophoto.svg';
 import './cast.css'
 
-export const Cast = () => {
+const Cast = () => {
     const [cast, setCast] = useState([])
     const { id } = useParams();
 
@@ -28,3 +28,5 @@ export const Cast = () => {
         </ul>
     )
 }
+
+export default Cast

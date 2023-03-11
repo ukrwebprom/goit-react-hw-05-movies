@@ -2,7 +2,7 @@ import { getReviews } from "Utils/MovieDB"
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-export const Reviews = () => {
+const Reviews = () => {
     const [reviews, setReviews] = useState([])
     const { id } = useParams();
 
@@ -10,7 +10,6 @@ export const Reviews = () => {
         const load = async() => {
             const data = await getReviews(id);
             setReviews(data.data.results);
-            console.log(data.data.results);
         }
         load();
     }, [id])
@@ -32,3 +31,5 @@ export const Reviews = () => {
         </>
     )
 }
+
+export default Reviews

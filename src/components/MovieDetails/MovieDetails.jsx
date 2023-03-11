@@ -28,7 +28,7 @@ export const MovieDetails = () => {
 /*             console.log(result.data) */
         }
         if(id) load();
-    }, [])
+    }, [id])
     const { title, vote_average, overview, poster_path, genres, release_date } = movie;
     const backLink = location.state?.from ?? "/";
     return(
@@ -38,7 +38,7 @@ export const MovieDetails = () => {
         
         <button type="button" onClick={() => navigate(backLink)} className="back-btn"><BackIcon width="15px" height="15px" /> Go back</button>
         <div className="movie">
-            <div>{poster_path ? <img src={`https://image.tmdb.org/t/p/w300/${poster_path}`} /> : <Nophoto />}</div>
+            <div>{poster_path ? <img src={`https://image.tmdb.org/t/p/w300/${poster_path}`} alt={title}/> : <Nophoto />}</div>
                 <div>
                     <div>
                     <h2>{title} ({release_date.substring(0, 4)})</h2>

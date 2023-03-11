@@ -14,12 +14,12 @@ export const Cast = () => {
             setCast(data.data.cast)
         }
         load();
-    }, [])
+    }, [id])
     return(
         <ul className="cast-list">
             {cast.map(({character, name, profile_path, id}) => (
                 <li className="actor" key={id}>
-                    {profile_path ? <img src={`https://image.tmdb.org/t/p/w200${profile_path}`} /> : <Nophoto />}
+                    {profile_path ? <img src={`https://image.tmdb.org/t/p/w200${profile_path}`} alt={name} /> : <Nophoto />}
                     <p className="actor-name">{name}</p>
                     <p className="actor-char">Character:<br /><b>{character}</b></p>
                 </li>

@@ -18,7 +18,7 @@ export const Search = () => {
             setMovies(data.data.results);
         }
         if(query) load();
-    }, [searchParams])
+    }, [searchParams, query])
 
     const searchSubmit = e => {
         e.preventDefault();

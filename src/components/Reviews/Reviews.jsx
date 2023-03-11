@@ -13,7 +13,7 @@ export const Reviews = () => {
             console.log(data.data.results);
         }
         load();
-    }, [])
+    }, [id])
 
     return(
         <>
